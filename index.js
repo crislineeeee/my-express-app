@@ -26,7 +26,6 @@ app.post('/submit', (req, res) => {
   res.send(`Data received: ${JSON.stringify(data)}`);
 });
 
-// Items
 const items = ['Apple', 'Banana', 'Orange'];
 
 app.get('/items', (req, res) => {
@@ -41,7 +40,6 @@ app.post('/items', (req, res) => {
   res.json(items);
 });
 
-// Error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
